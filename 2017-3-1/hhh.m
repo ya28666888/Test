@@ -1,0 +1,13 @@
+a=imread('C:\Users\csie\Desktop\Test\LSCData\A1\plant001_rgb.png');
+a(:,:,2);
+a2=im2bw(a,0.4);
+I2=[];
+I2(:,:,1)=double(a(:,:,1)).*~a2;
+I2(:,:,2)=double(a(:,:,2)).*~a2;
+I2(:,:,3)=double(a(:,:,3)).*~a2;
+subplot(1,3,1);
+imshow(a); title('OriImg');
+subplot(1,3,2);
+imshow(~a2); title('BinImg');
+subplot(1,3,3);
+imshow(uint8(I2)); title('Example');
