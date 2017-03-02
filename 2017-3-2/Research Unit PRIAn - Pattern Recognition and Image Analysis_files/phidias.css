@@ -1,0 +1,34 @@
+h3 {
+	margin: 1.5em 0 0 0;
+}
+
+li {
+	text-align: justify;
+}
+
+dl.event {
+	margin: 0 0 0 2em;
+	padding: 0;
+}
+
+.event dt {
+	margin: 0.3em 0 0 0;
+	font-style: italic;
+}
+
+.event dd {
+	margin: 0 0.5em 0.3em 1em;
+	text-align: justify;
+}
+
+figure {
+    display: table;
+    margin: 0 auto;
+    margin-bottom: 0.5em;
+}
+
+figcaption {
+    display: table-caption;
+    caption-side: bottom;
+    text-align: justify;
+}
