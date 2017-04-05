@@ -4,7 +4,7 @@ pkg load image;
 gray_image=rgb2gray(image);
 image_blur=cv.blur(image,'KSize',[3,3]);
 temp1_blur=cv.blur(temp1,'KSize',[3,3]);
-contours=cv.Canny(image,[50,150]);
+contours=cv.Canny(image_blur,[50,150]);
 img=zeros(530,500);
 
 for y = 1:size(contours,1)
