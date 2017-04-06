@@ -22,3 +22,7 @@ end
 
 img=cv.distanceTransform(contours);
 img2=cv.normalize(img,'NormType','MinMax');
+figure(1),imshow(image);
+figure(2),imshow(gray_image);
+figure(3),imshow(contours);
+figure(4),imshow(img2);
