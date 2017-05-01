@@ -26,21 +26,25 @@ end
 img=cv.distanceTransform(contours);
 img2=cv.normalize(img,'NormType','MinMax');
 
+Score = 9487;
+CurrentScore = 0;
+BeginX = 0;
+BeginY = 0;
 
-
-result = conv2(img2,templ_edge,'valid');
-[ColumnMin, Y]= min(result);
-
-[Gmin, X]= min(ColumnMin);
-
-min_x = X
-
-min_y = Y(X)
-
-
-HH=cv.circle(img2,[min_x,min_y],50);
-
-
-
-
-
+for y1=1:size(img2,1)
+  for x1=1:size(img2,2)
+    for y2=1:size(templ_edge,1)
+       for x2=1:size(templ_edge,2)
+         if (templ_edge(y2, x2) == 255)
+           CurrentScore = CurrentScore + img2(y1+y2, x1+x2);
+         end
+       end
+    end
+    if (CurrentScore < Score || Score == 9487)
+      Score = CurrentScore;
+      BeginX = x1;
+      BeginY = y1;
+    end
+    CurrentScore = 0;
+  end
+end
