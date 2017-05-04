@@ -1,5 +1,5 @@
-image=imread('C:\Users\csie\Desktop\project\2017-4-10\Test_image.png');
-templ=imread('C:\Users\csie\Desktop\project\2017-4-10\Template.png');
+image=imread('C:\Users\csie\Desktop\project\2017-5-1\01.png');
+templ=imread('C:\Users\csie\Desktop\project\2017-5-1\03.png');
 
 pkg load image;
 gray_image=rgb2gray(image);
@@ -31,8 +31,10 @@ CurrentScore = 0;
 BeginX = 0;
 BeginY = 0;
 
-for y1=1:size(img2,1)
-  for x1=1:size(img2,2)
+
+
+for y1=1:(size(img2,1)-size(templ_edge,1))
+  for x1=1:(size(img2,2)-size(templ_edge,2))
     for y2=1:size(templ_edge,1)
        for x2=1:size(templ_edge,2)
          if (templ_edge(y2, x2) == 255)
